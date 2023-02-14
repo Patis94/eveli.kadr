@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("../slick/ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("../slick/fonts/slick.eot");
+  src: url("../slick/fonts/slick.eot?#iefix") format("embedded-opentype"), url("..//slick/fonts/slick.woff") format("woff"), url("../slick/fonts/slick.ttf") format("truetype"), url("../slick/fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 46%;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+  transition: all 0.13s ease;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover, 
+.slick-next:hover {
+  transform: scale(1.08);
+  top: 44%;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  line-height: 1;
+  color: black;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.13s ease;
+}
+
+.slick-prev {
+  left: -41px;
+}
+[dir=rtl] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+.slick-prev:before {
+  content: url(../img/left.png);
+}
+[dir=rtl] .slick-prev:before {
+  content: url(../img/right.png);
+}
+
+.slick-next {
+  right: -10px;
+
+}
+[dir=rtl] .slick-next {
+  left: -25px;
+  right: auto;
+}
+.slick-next:before {
+  content:url(../img/right.png);
+}
+[dir=rtl] .slick-next:before {
+  content: url(../img/left.png);
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-dots {
+  position: relative;
+  bottom: 5px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}/*# sourceMappingURL=slick-theme.css.map */
+
+/*MEDIA QUERIES !!!*/
+
+/*<=========     MEDIA DLA < 1500px    ============>*/
+
+@media screen and (min-width: 1500px) {
+  .slick-prev,
+  .slick-next {
+    top: 48%;
+  }
+
+  .slick-prev:hover, 
+  .slick-next:hover {
+    top: 46%;
+  }
+
+  .slick-prev {
+    left: -55px;
+  }
+
+  .slick-next {
+    right: -21px;
+  }
+
+  .slick-dots {
+    position: relative;
+    bottom: -7px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 17px;
+  }
+
+  .slick-dots li {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+/*<=========      MEDIA DLA MIN 769px / MAX 950px       ============>*/
+
+@media screen and (min-width: 769px) and (max-width: 950px) {
+  .slick-dots {
+    position: relative;
+    bottom: 5px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 15px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 45%;
+  }
+
+  .slick-prev:hover, 
+  .slick-next:hover {
+    transform: scale(1.06);
+    top: 42%;
+  }
+
+  .slick-dots li {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  .slick-prev {
+    left: -35px;
+  }
+
+  .slick-next {
+    right: -2px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 950px) and (min-height: 375px) and (max-height:430px) {
+  .slick-dots {
+    position: relative;
+    bottom: 3px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 38%;
+  }
+
+  .slick-prev:hover, 
+  .slick-next:hover {
+    transform: scale(1.05);
+    top: 35%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .slick-dots {
+    position: relative;
+    bottom: 3px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 40%;
+  }
+
+  .slick-prev:hover, 
+  .slick-next:hover {
+    transform: none;
+    top: 36%;
+  }
+
+  .slick-dots li {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 14px;
+    width: 10px;
+    height: 15px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (min-width: 479px) and (max-width: 549px) and (orientation: landscape) {
+  .slick-dots {
+    position: relative;
+    bottom: 3px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 40%;
+  }
+
+  .slick-prev:hover, 
+  .slick-next:hover {
+    transform: none;
+    top: 36%;
+  }
+  
+  .slick-dots li {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 14px;
+    width: 10px;
+    height: 10px;
+    line-height: 0px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 478px) {
+  .slick-dots {
+    position: relative;
+    bottom: 3px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 45%;
+  }
+
+  .slick-prev:hover, 
+  .slick-next:hover {
+    transform: scale(1.00);;
+    top: 43%;
+  }
+  
+  .slick-dots li {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 15px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+  }
+}
+

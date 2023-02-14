@@ -1,0 +1,30 @@
+.full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.owl-carousel {
+  height: 100%;
+}
+
+.single-slide {
+  height: 105vh;
+  position: relative;
+  display: table;
+  background: #ddd none repeat scroll 0 0;
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.single-slide:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+}/*# sourceMappingURL=main.css.map */
